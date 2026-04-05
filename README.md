@@ -11,50 +11,31 @@ Support for version 1.21+: Optimized for the latest Paper/Spigot versions, using
 
 Lightweight and efficient: No external dependencies (except for the Paper API), data saved in YAML files, minimal server load.
 
-## 🛠️ Features
+## ⚙️ Commands and Permissions
 
-**For Players**
-Command: /mysticpack: Opens a custom backpack.
 
-Dynamic size: Backpack size adjusts to your permissions (Small 9, Medium 18, Large 27).
+<details>
+<summary>Permissions</summary>
 
-Autosave: Items are safely saved after closing the backpack or logging out.
+| Permission                      | Description             | Default              |
+|---------------------------------|:---------------------:|---------------------:|
+| mysticsbackpack.use             | Allows you to open your own backpack.              | everyone            |
+| mysticsbackpack.medium          | Unlocks a medium backpack (18 slots).              | op            |
+| mysticsbackpack.large           | Unlocks a large backpack (27 slots).              | op             |
+| mysticsbackpack.admin           | Allows you to view and edit other players' backpacks. | op |
 
-Clear interface: Aesthetically pleasing GUI with colorful titles indicating backpack size.
+</details>
+<details>
+<summary>Commands</summary>
 
-**For Administrators**
+| Command                     | Description             | Permission              |
+|---------------------------------|:---------------------:|---------------------:|
+| /mysticpack            | Opens your backpack.    | mysticsbackpack.use            |
+| /mysticpackadmin <player>          | View the player's backpack.              | mysticsbackpack.admin           |
+| /mysticpackadmin <player> edit   |  Edit the player's backpack.        | mysticsbackpack.admin             |
 
-Command: /mysticpackadmin <player>: View another player's backpack (read-only).
 
-Command: /mysticpackadmin <player> edit: Edit another player's backpack (allows removing and adding items).
-
-Offline Support: Allows editing the backpacks of players who are not currently online (e.g., after detecting cheats in the logs).
-
-Audit Logs: Automatically records every admin action in the audit_log.txt file in the following format: [DATE TIME] Admin 'Nickname' performed the action 'ACTION' on player 'Target' (Status: ONLINE/OFFLINE).
-
-## ⚙️ Configuration and Permissions
-
-**Permissions**
-
-Permission -- Description -- Default
-
-mysticsbackpack.use -- Allows you to open your own backpack. -- true (everyone)
-
-mysticsbackpack.medium -- Unlocks a medium backpack (18 slots). -- op
-
-mysticsbackpack.large -- Unlocks a large backpack (27 slots). -- op
-
-mysticsbackpack.admin -- Allows you to view and edit other players' backpacks. -- op
-
-**Commands**
-
-Command -- Description -- Permission
-
-/mysticpack -- Opens your backpack. -- mysticsbackpack.use
-
-/mysticpackadmin <player> -- View the player's backpack. -- mysticsbackpack.admin
-
-/mysticpackadmin <player> edit -- Edit the player's backpack. -- mysticsbackpack.admin
+</details>
 
 ## 🚀 Requirements
 Server: PaperMC or Spigot 1.21 or later.
